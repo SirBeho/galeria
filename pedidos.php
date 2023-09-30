@@ -1,6 +1,6 @@
 <?php
 
-$DataJson = file_get_contents('Pedidos.json');
+$DataJson = file_get_contents('./json/Pedidos.json');
 $Data = json_decode($DataJson, true);
 if ($Data == null || count($Data) == 0) {
   die('Error al cargar los datos desde el archivo JSON.');
