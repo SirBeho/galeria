@@ -11,14 +11,10 @@ if(isset($_POST['eliminar'])){
 
   unset($_SESSION['whatsapp_link']);
   unset($_SESSION['enviado']);
-
   
-
-
-
   $pedido = $_SESSION['pedido'];
 
-  $DataJson = file_get_contents('Pedidos.json');
+  $DataJson = file_get_contents('../json/Pedidos.json');
 
     $Data = json_decode($DataJson, true);
     if ($Data == null || count($Data) == 0) {
@@ -30,7 +26,7 @@ if(isset($_POST['eliminar'])){
       unset($Data[$pedido]);
   }
 
-  file_put_contents('Pedidos.json', json_encode($Data));
+  file_put_contents('../json/Pedidos.json', json_encode($Data));
 
 }
 
@@ -39,7 +35,7 @@ unset($_SESSION['error2']);
 
  
 
-   header("Location: ./");
+   header("Location: ../");
    exit;
 
 ?>
