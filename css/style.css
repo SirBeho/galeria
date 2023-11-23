@@ -1,0 +1,26 @@
+
+
+.image-container {
+  flex: 1 0 calc(100% - 1rem);
+  max-width: calc(100% - 1rem);
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  max-height: 20rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+  .image-container {
+    flex: 1 0 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+}
+
+@media (min-width: 900px) {
+  .image-container {
+    flex: 1 0 calc(33.33% - 1rem);
+    max-width: calc(33.33% - 1rem);
+  }
+}

@@ -7,9 +7,8 @@ include("header.php");
 
 
 </h1>
-<div style="display:flex ;gap: 1rem; flex-wrap: wrap; justify-content: space-around;">
+<div style="display: flex;gap:1rem; flex-wrap: wrap; justify-content: space-around;">
   <?php
-
   $files = scandir("fotos");
   array_shift($files);
   array_shift($files);
@@ -22,12 +21,10 @@ include("header.php");
         'codigo' => '--',
       ];
     }
-
   ?>
 
-
     <!-- Agrega un enlace que abra el modal al hacer clic en la imagen -->
-    <div style='max-width: 20rem; cursor: pointer; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); display: flex; max-height: 15rem; position: relative;' onclick='openModal(<?php echo json_encode($Articulos[$file]); ?>,"<?= $file ?>")'>
+    <div class='image-container' onclick='openModal(<?php echo json_encode($Articulos[$file]); ?>,"<?= $file ?>")'>
       <img style='height: 100%; object-fit: cover; width: 100%;' class='img-responsive' src='<?php echo $ruta; ?>' alt=''>
       <img style='width: 7rem; position: absolute; bottom: 0; right: 0' src='logo.png'>
       <span style='position: absolute; top: 10px; left: 16px; color: black; background: white; border-radius: 8px; padding-inline: 5px;'> <?php echo $Articulos[$file]["codigo"]; ?> </span>

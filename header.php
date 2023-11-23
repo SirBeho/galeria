@@ -59,6 +59,7 @@ $_SESSION['whatsapp_link'] = $whatsappLink;
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galeria de Fotos </title>
   <script src="./script.js" defer></script>
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
@@ -183,7 +184,7 @@ $_SESSION['whatsapp_link'] = $whatsappLink;
 
 
 
-  <div class="bg-dark" onclick="subir()" style="cursor: pointer; position: fixed;right: 2%;bottom: 2%;border-radius: 50%;width: 6vh;height: 6vh;display: flex;align-items: center;justify-content: center;">
+  <div class="bg-dark" onclick="subir()" style="cursor: pointer; position: fixed;right: 2%;bottom: 2%;border-radius: 50%;width: 6vh;height: 6vh;display: flex;align-items: center;justify-content: center;z-index: 20">
     <svg fill="white" style="width: 100%;height: 58%;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
       <path d="M32 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c53 0 96-43 96-96l0-306.7 73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 109.3 160 416c0 17.7-14.3 32-32 32l-96 0z" />
     </svg>
@@ -202,4 +203,4 @@ $_SESSION['whatsapp_link'] = $whatsappLink;
   </script>
 
 
-  <div name="arriba" class="container " style="margin-top: 4rem;">
+  <div name="arriba"  style="margin:2rem;margin-top: 4rem; ">
